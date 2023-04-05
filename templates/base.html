@@ -8,5 +8,10 @@
     <script defer src="/static/app.js"></script>
     <link rel="stylesheet" href="/static/style.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      {%block content %} {% endblock %}
+      <div class="user-guess">{% block guess %}{% endblock %}</div>
+    </main>
+  </body>
 </html>

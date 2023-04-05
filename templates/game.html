@@ -1,0 +1,16 @@
+{% extends 'base.html' %}{% block content %}
+<table>
+  {% for row in board%}
+  <tr>
+    {% for cell in row %}
+    <td>{{cell}}</td>
+    {% endfor %}
+  </tr>
+  {%endfor%}
+</table>
+{% endblock %} {% block guess %}
+<form action="">
+  <input type="text" name="guess" />
+  <button>Guess</button>
+</form>
+{% endblock %}

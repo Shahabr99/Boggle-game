@@ -1,0 +1,26 @@
+main {
+  width: 300px;
+  height: 300px;
+  margin: 200px auto;
+}
+
+table {
+  margin-bottom: 50px;
+}
+
+td {
+  border: 1px solid;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+td:hover {
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.user-guess {
+  display: flex;
+  justify-content: center;
+}
