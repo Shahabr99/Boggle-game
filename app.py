@@ -13,15 +13,19 @@ def create_board():
     board = boggle_game.make_board()
     session['gameboard'] = board
     
-    return render_template('game.html', board = board)
+    return render_template('index.html', board = board)
 
 
 
 @app.route('/result')
 def handle_guess():
-    guess = request.args['user_guess']
+    guess = request.args['guess']
     board = session['gameboard']
     
     # validating user's guess
-    response = booggle_game.check_valid_word(board, guess)
-    return jsonify({'result':'response'})
+    response = boggle_game.check_valid_word(board, guess)
+   
+    return jsonify({'result': response})
+
+
+

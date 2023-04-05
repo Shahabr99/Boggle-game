@@ -5,6 +5,10 @@ from boggle import Boggle
 
 
 class FlaskTests(TestCase):
+    def setUp(self):
+        self.client = app.test_client()
+        app.config['TESTING'] = True
 
-    # TODO -- write tests for every view function / feature!
+
+
 
